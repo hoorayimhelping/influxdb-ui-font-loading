@@ -48,6 +48,17 @@ export default {
           }
         }
       ]
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: `${STATIC_DIRECTORY}[contenthash:10].[ext]`,
+          },
+        },
+      ],
     }
   ]},
   plugins: [new HtmlWebpackPlugin({
