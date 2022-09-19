@@ -34,8 +34,8 @@ const App = () => {
       <Navigation />
       <Page>
         <Page.Contents>
-          <h1>Hello, world!</h1>
-          <h1 style={{'fontFamily': 'Helvetica'}}>Hello, non-styled world!</h1>
+          <h1 style={{margin: '0.25em 0'}}>Hello, Proxima Nova!</h1>
+          <h1 style={{'fontFamily': 'Helvetica', margin: '0.25em 0'}}>Hello, Helvetica!</h1>
         </Page.Contents>
       </Page>
     </AppWrapper>
