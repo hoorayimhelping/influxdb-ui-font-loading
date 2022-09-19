@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "esNext",
+    "module": "esNext",
+    "moduleResolution": "node",
+    "lib": ["esnext", "dom"],
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "isolatedModules": false,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": false,
+    "noImplicitUseStrict": false,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "noLib": false,
+    "noEmitHelpers": true,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "checkJs": false,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "assets",
+    "dist",
+    "node_modules"
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "global.d.ts", "intl.d.ts"]
+}

@@ -1,13 +1,33 @@
 import path from 'path'
 import {fileURLToPath} from 'url';
 
+const currentDirectory = path.dirname(fileURLToPath(import.meta.url))
+
 export default {
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
+  mode: 'development',
   output: {
     filename: 'main.js',
-    path: path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'dist')
+    path: path.resolve(currentDirectory, 'dist')
+  },
+  resolve: {
+    alias: {
+      src: path.resolve(currentDirectory, 'src'),
+      assets: path.resolve(currentDirectory, 'assets'),
+    },
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
-    rules: []
+    rules: [{
+      test: /\.tsx?$/,
+      use: [
+        {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true
+          }
+        }
+      ]
+    }]
   }
 }
