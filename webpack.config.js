@@ -14,7 +14,7 @@ export default {
   output: {
     filename: `${STATIC_DIRECTORY}[contenthash:10].js`,
     path: path.resolve(currentDirectory, 'dist'),
-    clean: true
+    // clean: true
   },
   resolve: {
     alias: {
@@ -45,6 +45,17 @@ export default {
           loader: 'sass-loader',
           options: {
             implementation: sass
+          }
+        }
+      ]
+    },
+    {
+      test: /\.(png|svg|jpg|gif)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: `${STATIC_DIRECTORY}[contenthash:10].[ext]`
           }
         }
       ]
