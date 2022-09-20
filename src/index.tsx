@@ -1,15 +1,17 @@
-import React, {useState} from 'react'
-import ReactDOM from 'react-dom/client'
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom/client';
 
-import {AppWrapper, Icon, IconFont, TreeNav, Page} from '@influxdata/clockface'
-import '@influxdata/clockface/dist/index.css'
+import {AppWrapper, Icon, IconFont, TreeNav, Page} from '@influxdata/clockface';
+import '@influxdata/clockface/dist/index.css';
+
+import {Graph} from 'src/graph';
 
 const Navigation = () => {
-  const [isExpanded, setIsExpanded] = useState(true)
+  const [isExpanded, setIsExpanded] = useState(true);
 
   const handleExpansionToggle = () => {
-    setIsExpanded(!isExpanded)
-  }
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <TreeNav
@@ -25,7 +27,7 @@ const Navigation = () => {
         icon={<Icon glyph={IconFont.GraphLine_New} />}
       />
     </TreeNav>
-  )
+  );
 }
 
 const App = () => {
@@ -36,12 +38,11 @@ const App = () => {
         <Page.Contents>
           <h1 style={{margin: '0.25em 0'}}>Hello, Proxima Nova!</h1>
           <h1 style={{'fontFamily': 'Helvetica', margin: '0.25em 0'}}>Hello, Helvetica!</h1>
+          <Graph />
         </Page.Contents>
       </Page>
     </AppWrapper>
-  )
-}
+  );
+};
 
-console.log('hello!')
-
-ReactDOM.createRoot(document.getElementById('content')).render(<App />)
+ReactDOM.createRoot(document.getElementById('content')).render(<App />);
