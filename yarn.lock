@@ -22,10 +22,10 @@
     "@types/react-window" "^1.8.5"
     react-window "^1.8.7"
 
-"@influxdata/giraffe@^2.34.3":
-  version "2.34.3"
-  resolved "https://registry.yarnpkg.com/@influxdata/giraffe/-/giraffe-2.34.3.tgz#e2fd54025f98a16c7aa01a90f3dfc33094936c66"
-  integrity sha512-SxY1UxSTnMYwMprsmG7sIU4gzsAZKkRVUR4H+AGUqPZuxmWKa1WjAgw1IYihYrNyLKrK4xHGAb2UvUSEHMfzcg==
+"@influxdata/giraffe@^2.35.0":
+  version "2.35.0"
+  resolved "https://registry.yarnpkg.com/@influxdata/giraffe/-/giraffe-2.35.0.tgz#2d3ff63926020410ad6fff66ebbfb322ec399c75"
+  integrity sha512-P63MeApxf3ydUYk51X7pZRPu5Tu+GZ6brDYugEBQ3J6fYarkQTyG8NY2ZpSxfjfoW2IPPkum4XRzpZKviehnbQ==
   dependencies:
     merge-images "^2.0.0"
 
