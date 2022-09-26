@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import {AppWrapper, Icon, IconFont, TreeNav, Page} from '@influxdata/clockface';
 import '@influxdata/clockface/dist/index.css';
+import './styles.scss'
 
 import {Graph} from 'src/graph';
 
@@ -37,7 +38,7 @@ const App = () => {
       <Page>
         <Page.Contents>
           <h1 style={{margin: '0.25em 0'}}>Hello, Proxima Nova!</h1>
-          <h1 style={{'fontFamily': 'Helvetica', margin: '0.25em 0'}}>Hello, Helvetica!</h1>
+          <h1 className="example-style" style={{'fontFamily': 'Helvetica', margin: '0.25em 0'}}>Hello, Helvetica!</h1>
           <Graph />
         </Page.Contents>
       </Page>
